@@ -1,0 +1,9 @@
+@import '~normalize.scss'; /* ~ - означает найти в node_modules */
+@import '../styles/abstracts/fonts.scss';
+@import '../styles/abstracts/animations.scss';
+@import '../styles/abstracts/base-styles.scss';
+@import '../styles/abstracts/variables.scss';
+@import '../styles/layout/header.scss';
+@import '../styles/components/burger.scss';
+@import '../styles/layout/footer.scss';
+@import 'media.scss';
