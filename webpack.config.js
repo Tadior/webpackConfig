@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin"); //
 const { extendDefaultPlugins } = require("svgo"); //
 //---------------------------------------------------------------------
@@ -115,7 +116,8 @@ module.exports = {
       //}),
       new MiniCssExtractPlugin({
          filename: fileName('css')
-      })
+      }),
+      new ESLintPlugin({ extensions: 'ts' })
    ],
    module: {
       rules: [
